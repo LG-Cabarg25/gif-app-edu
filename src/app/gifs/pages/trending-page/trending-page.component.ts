@@ -24,8 +24,11 @@ const imageUrls: string[] = [
 @Component({
   selector: 'app-trending-page',
   imports: [GiftListComponent],
-  templateUrl: './trending-page.component.html',
-
+  template: `
+    <section class="py-5">
+      <gift-list [gifs]="gifs()" />
+    </section>
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class TrendingPageComponent {

@@ -5,6 +5,17 @@ import { SideMenuComponent } from '../../components/side-menu/side-menu.componen
 @Component({
   selector: 'app-dashboard-page',
   imports: [RouterModule, SideMenuComponent],
-  templateUrl: './dashboard-page.component.html',
+  template: `
+    <div
+      class="bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-300 selection:bg-blue-600 selection:text-white"
+    >
+      <div class="flex flex-col relative w-screen">
+        <gifs-side-menu />
+        <div class="ml-[220px] px-4 flex flex-col flex-1 h-full text-slate-800">
+          <router-outlet />
+        </div>
+      </div>
+    </div>
+  `,
 })
 export default class DashboardPageComponent {}
