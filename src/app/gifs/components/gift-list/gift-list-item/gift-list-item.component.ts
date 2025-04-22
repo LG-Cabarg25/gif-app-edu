@@ -5,7 +5,11 @@ import { Component, input } from '@angular/core';
   imports: [],
   template: `
     <div>
-      <img class="h-auto max-w-full rounded-lg" [src]="imageUrl()" alt="" />
+      <img
+        class="h-full w.full max-w-full rounded-lg object-cover"
+        [src]="imageUrl()"
+        alt=""
+      />
     </div>
   `,
 })
